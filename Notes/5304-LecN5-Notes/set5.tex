@@ -1,0 +1,99 @@
+\documentclass{article}
+\usepackage{graphicx}
+\usepackage{amsmath} % For math formatting
+
+
+\begin{document}
+
+\title{Fall-2023 5304 LecN5 Notes}
+\author{Wan}
+\date{\today}
+\maketitle
+
+
+\section{Question}
+BG: Normwise backward error\\
+Question: Find smallest perturbation to apply to A, b so that exact solution of perturbed system is y\\
+After understanding this, then back to Exer 8
+
+
+\section{Exer 8}
+
+Comments:
+Perturb every entry by a small scalar, 
+
+
+\section{Topic: LEMMA1, LEMMA2, Theorem1, Theorem2}
+\subsection*{Lemma1}
+If $\left\lVert E\right\rVert < 1$, then $I-E$ is nonsingular and
+$\left\lVert(I-E)^{-1} \right\rVert \leq \frac{1}{1-\left\lVert E\right\rVert }$
+
+\subsection*{Lemma2}
+Lemma2 generalizes Lemma1.
+
+
+\section{Topic: Condtion Number-Definition and Peoperties}
+
+
+\section{Topic: Norm-based Error Bounds}
+\subsection*{Forward err and Backward err}
+Conclusion:
+1, forward error expression is $\frac{\left\lVert x-y\right\rVert}{\left\lVert x\right\rVert}$ where y is the approximate solution by the perturbation system.\\
+\\
+2, backward error expression is $\left\lVert r\right\rVert $
+
+
+\section{Topic Estimating condition number, 5-17}
+BG: We need cond num to estimate the illness of a system, $\left\lVert A\right\rVert$ is easy
+to compute, but $A^{-1}$ is not. Computing $\left\lVert A^{-1}\right\rVert $ is expensive.\\
+Thus, we sometimes just want to know a lower bound for the cond num, which implies the illness
+of the system is at least as bad as this bound.\\
+There are two ways to do it.
+
+\subsection*{Method1: Select a vector v where norm(v)=1, 5-17}
+Assumption (2): \\
+$\left\lVert v\right\rVert =1$\\
+$\left\lVert Av\right\rVert$ is small. (A is near-singular)\\
+\\
+\noindent
+Conclusion:\\
+$\left\lVert v\right\rVert  = \left\lVert A^{-1} Av\right\rVert \leq \left\lVert A^{-1}\right\rVert \left\lVert Av\right\rVert $\\
+Thus,\\
+$\left\lVert A^{-1}\right\rVert \geq \frac{\left\lVert v\right\rVert}{\left\lVert Av\right\rVert}$\\
+
+\noindent
+Steps to solve problem:\\
+1, observe given A, find a v, normally there exists linear combination relation in A.\\
+2, calculate Av\\
+3, Normally take 1-norm (col) or inf-norm(row)
+
+Example:
+
+
+\subsection*{Method2: Near-sigularity, 5-19}
+Conclusion:\\
+$cond(A) * \left\lVert A-B\right\rVert \geq \left\lVert A\right\rVert $\\
+\\
+$cond(A) \geq \frac{\left\lVert A\right\rVert }{\left\lVert A-B\right\rVert }$\\
+\\
+$\frac{1}{cond(A)} \leq \frac{\left\lVert A\right\rVert }{\left\lVert A-B\right\rVert }$\\
+\\
+\noindent
+Method2 proof:\\
+
+\noindent
+Method Desp: If you take A and find that it is close to a singular matrix b,
+then $\left\lVert A-B\right\rVert $ will as large as it can, so that $\frac{\left\lVert A\right\rVert }{\left\lVert A-B\right\rVert }$
+is small, implying a good lower bound.
+then:\\
+
+\section{Esitimating Errs from Residual Norms}
+BG: Forward error
+Residual norm is a very common way to stop algo.
+
+Proof: used Theorem 1 when E = 0.
+
+
+\section{Appendix: Component-based Error Bounds}
+
+\end{document}
