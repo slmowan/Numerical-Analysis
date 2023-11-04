@@ -4,3 +4,7 @@
 *.fdb_latexmk
 *.fls
 *.synctex.gz
+
+# ignore following folders
+Ori-Lec-Notes/
+5304-hmws/

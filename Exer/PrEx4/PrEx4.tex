@@ -1,0 +1,36 @@
+\documentclass{article}
+\usepackage{graphicx}
+\usepackage{amsmath} % For math formatting
+
+
+\begin{document}
+
+\title{Fall-2023 5304 PrEx04}
+\author{Wan}
+\date{\today}
+\maketitle
+
+\noindent
+This exercise is related to LecN5 and LecN6.
+
+\section{True or False}
+\subsection*{a: If A and B are SPD then A+B is also SPD}
+True. Using the operation property of inner product\\
+$\left\langle (A+B)u,u\right\rangle = 
+\left\langle Au,u\right\rangle + \left\langle Bu,u\right\rangle > 0
+$
+
+\subsection*{b: When A is SPD then its inverse is also SPD}
+True. There are 2 ways to show.\\
+\\
+Way1: Matrix is SPD if it is symmetric and its eigenvalues are positive.\\
+Then, use the fact that the eigenvalues of $A^{-1}$ are (1/eigenvalues of A).\\
+\\
+Way2: Use the definition of SPD and the property of inner product.\\
+Known that $\left\langle Au,u\right\rangle > 0$ for all $u \neq 0$\\
+Let $v = A^{-1}u$, then $u = Av$ and $v = A^{-1}u \neq 0$\\
+Thus,\\
+$\left\langle A^{-1}u,u\right\rangle = \left\langle v,Av\right\rangle = \left\langle Av,v\right\rangle > 0$.\\
+
+
+\end{document}
