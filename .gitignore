@@ -4,6 +4,8 @@
 *.fdb_latexmk
 *.fls
 *.synctex.gz
+*.jpg
+*.png
 
 # ignore following folders
 Ori-Lec-Notes/
