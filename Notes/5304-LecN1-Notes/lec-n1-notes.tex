@@ -37,9 +37,11 @@ This is a scalar.
 \textbf{Form 2: Outer product view}
 Will produce rank-1 matrix.
 
+\subsection*{A x B = C, get jth col of C}
+\includegraphics[width=1\linewidth]{1-1}
 
 
-
+\pagebreak
 \section{Rank}
 
 \subsection*{Rank + Nullity Theorem}
@@ -56,13 +58,52 @@ or right-multiply a matrix will not change the rank of the original matrix.\\
 \subsection*{Diaguonal Matrix}
 \subsection*{Vandermond}
 \subsection*{Hermitan}
+Def: $A^H = A$
+
+
+
 \subsection*{Unitary}
+Def: $Q^TQ = QQ^T = I$, or $Q^{-1} = Q^T$
+
 \subsection*{Orthogonal}
+Def: $Q^TQ = I$ [orthonormal columns] \\
+% 正交归一
+A matrix is orthogonal iff its columns are orthonormal, meaning they are orthogonal and of unit length.\\
+A set of vectors is said to be orthonormal if they are all normal, and each pair of vectors in the set is orthogonal. \\
+\includegraphics[width=1\linewidth]{1-3}
+
+\medskip
+\noindent
+Properties:\\
+det(Q) = ± 1. 
+
+\medskip
+\noindent
+Geometric understanding:\\
+Rotation matrices are orthogonal.
+
+\medskip
+\noindent
+Application:\\
+- decompositions in numerical linear algebra: QR, SVD.
+- Orthogonality is essential in understanding and solving least-squares problems.
+
+\medskip
+\noindent
+Note: \\
+- its difference with unitary (orthogonal is not necessarily square)\\
+
+
 \subsection*{Symmetric and Skew-Symmetric}
-Def od SM:
+Def od SM:\\
 $A^T = A$\\
 
-Def of SSM:
+\noindent
+Application:\\
+- SPD
+
+\subsection{Skew-Symmetric}
+Def: \\
 $A^T = -A$\\
 
 \subsection*{Skew-Symmetric}
