@@ -11,7 +11,11 @@
 \maketitle
 
 \noindent
-Topics: The Gram-Schmidt algo and the QR Factorization; Least-squares problems; Applications; Data fitting.
+Topics: The Gram-Schmidt algo and the QR Factorization; Least-squares problems; Applications; Data fitting.\\
+
+
+\noindent
+Math tools: Eigenvalues and Eigencevectors
 
 \section{Least-Squares Systems and Data fitting}
 % 这个地方不是很理解，可能之后再回来研究
@@ -30,15 +34,43 @@ Topics: The Gram-Schmidt algo and the QR Factorization; Least-squares problems; 
 
 \pagebreak
 \section{Gram-Schmidt}
+\subsection{Concept}
 
-\subsection*{Understanding the process of Gram-Schmidt}
+\subsection{Classical Gram-Schmidt}
+
+The cost of classical Gram-Schmidt is $2mn^2 - \frac{2}{3}n^3$ flops.\\
+
+\noindent
+Verification of Algo:\\
+1, A = QR. by checking whether norm(A - Q*R) is a small number.\\
+2, Orthogonality: Q is orthogonal. by checking whether $Q^TQ = I$, norm(Q'* Q - eye(n)) should be small.
+
+\subsection{Modified Gram-Schmidt}
+
+Cost of QR by using classical Gram-Schmidt:\\
+
 
 \subsection*{Cost}
+
 
 
 \pagebreak
 \section{QR Factorization}
+% 我们可以直接通过Q^TA = R 得出R
+\subsection{BG}
+The norm here is referring to the 2-norm.\\
+\subsection*{Concept}
+\includegraphics*[width=1\linewidth]{7-3}
+A = QR where Q is an orthogonal matrix and R is an invertible upper triangular matrix. If A is
+non singular, then this factorization is unique.\\
+\noindent
+\includegraphics[width=1\linewidth]{7-2}\\
 
+% R 是正线上三角
+
+\subsection*{Examples}
 \subsection*{Cost}
+\subsection*{Application}
+\includegraphics[width=1\linewidth]{7-4}\\
 
 \end{document}
