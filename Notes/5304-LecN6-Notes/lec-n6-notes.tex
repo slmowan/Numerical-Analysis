@@ -17,6 +17,7 @@
 
 \section{Positive Definite Matrices}
 
+
 \subsection*{Definition of PD}
 A real, square matrix is said to be PD if:\\
 $\left\langle Au,u\right\rangle > 0$ for all $u \neq 0$ and $u \in R^n$
@@ -30,12 +31,45 @@ This can be proof by contradiction.\\
 This can be proved by the definition of eigenvalues.\\
 
 \pagebreak
+\section{Pred: SPD, Semi-Definite, Neg definite, and Indefinite Matrices}
+\subsection{Pred by the quadratic form}
+Pred steps:\\
+1, transform the matrix to the quadratic form, method as below:\\
+\includegraphics[width=1\linewidth]{lec6-7}\\
+2, pred by this:\\
+\includegraphics[width=1\linewidth]{lec6-8}\\
+
+\subsection*{Example}
+\includegraphics[width=1\linewidth]{lec6-10}\\
+
+
+\subsection{Pred by leading principal minors}
+\includegraphics[width=1\linewidth]{6-12}\\
+
+\subsection{Conclusions}
+1, Semi-definite matrix may be nonsingular, not as positive definite one.
+
+
+
+\pagebreak
+\section{Gram matrix $X^TX$}
+Gram matrix is a special type of matrix
+to describe the inner product relationships between sets of vectors. 
+Specifically, if there is a set of vectors $[v1, v2, ..., vn]$, then the elements 
+$G_{ij}$ of the Gram matrix G are the inner products of vectors $v_i$ and $v_j$, 
+that is, $Gij = <vi, vj>$. The Gram matrix is semi-positive definite, and it is positive definite when the set of vectors is linearly independent.
+
+\includegraphics[width=1\linewidth]{6-11}\\
+
+\pagebreak
 \section{Symmetric positive definite matrices, SPD}
 \subsection{Definition of SPD}
-A square matrix is SPD
-iff it is \textbf{symmetric} and all its eigenvalues $\lambda$ are \textbf{positive},
+A square matrix is SPD \textbf{iff}
+it is \textbf{symmetric} and all its eigenvalues $\lambda$ are \textbf{positive},
 that is $\lambda > 0$.\\
-Note: Don't forget the 2nd part of the definition, sometimes useful to think in this way.\\
+Note: \\
+- Don't forget the 2nd part of the definition, sometimes useful to think in this way.\\
+- This is an iff relationship.
 
 \subsection*{Properties}
 \textbf{1, Diagonal entries of SPD is positive.}\\
@@ -46,7 +80,7 @@ for all nonzero vector $u$, we have $\left\langle Au,u\right\rangle > 0$.
 Then, utilize identity matrix to extract an element of A. (MV Product, dot product view). Good enough.\\
 
 \noindent
-\textbf{2, Each $A_k$ is SPD}\\
+\textbf{2, SPD iff Each $A_k$ is SPD}\\
 will fill this part later.\\
 
 \noindent
@@ -64,9 +98,6 @@ Proof (will use the notation of the inner product and def of SPD):\\
 
 
 \subsection*{Application: Covariance Matrices in Statistics}
-
-\pagebreak
-\section{Pred: SPD, Semi-Definite, Neg definite, and Indefinite Matrices}
 
 
 \pagebreak
