@@ -6,6 +6,7 @@
 *.synctex.gz
 *.jpg
 *.png
+*.jpeg
 
 # ignore following folders
 Ori-Lec-Notes/
