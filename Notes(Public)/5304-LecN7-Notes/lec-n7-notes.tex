@@ -1,0 +1,144 @@
+\documentclass{article}
+\usepackage{graphicx}
+\usepackage{amsmath} % For math formatting
+
+
+\begin{document}
+
+\title{Fall-23 5304 LecN7 Notes}
+\author{Wan}
+\date{\today}
+\maketitle
+
+\noindent
+Topics: The Gram-Schmidt algo and the QR Factorization; Least-squares problems; Applications; Data fitting.\\
+
+
+\noindent
+Math tools: Eigenvalues and Eigencevectors
+
+\section{Least-Squares Systems and Data fitting}
+% 这个地方不是很理解，可能之后再回来研究
+\subsection*{Problem BG}
+1, overdetermined system, more euqations than unknowns, no sol\\
+\includegraphics[width=1\linewidth]{7-1}\\
+\\
+2, Function approximation
+
+3, Goal: Find the best approximation to the system of equations.\\
+
+\subsection*{Geometric Interpretation}
+
+\subsection*{Good illustration: Data fitting}
+
+\pagebreak
+\section{QR Factorization}
+
+
+\subsection{Concept}
+\includegraphics*[width=1\linewidth]{7-3}
+A = QR where Q is an orthogonal matrix and R is an invertible upper triangular matrix (diagonal entry elements are all positive).
+If A is non-singular, then this factorization is unique.\\
+
+QR Visulization ($c_j$ can be expressed as a linear combination of $q_j$):\\
+\includegraphics*[width=1\linewidth]{7-2}
+
+\pagebreak
+
+\section{Using classical Gram-Schmidt to get QR}
+
+\subsection*{Classical Gram-Schmidt}
+\medskip
+\textbf{Input and Ouput Description}\\
+Input: $X = \left[x_1,x_2...x_n\right]$, should be full rank (columns are linearly independent), but not
+necessarily sqare.\\
+
+\noindent
+Output: Will get Q and R where Q is orthogonal ($Q^TQ = I$), and R is upper triangular.\\
+
+\noindent
+Picture:\\
+\includegraphics[width=0.5\linewidth]{7-5}
+
+\noindent
+\textbf{Process}\\
+\includegraphics[width=0.5\linewidth]{7-6}
+\includegraphics[width=0.5\linewidth]{7-7}
+
+\pagebreak
+\noindent
+\textbf{Using Classical Gram-Schmidt to get QR, start from step j}\\
+\\
+\includegraphics[width=1\linewidth]{7-8}
+\includegraphics[width=1\linewidth]{7-9}
+
+
+
+\subsection*{Cost}
+The cost of classical Gram-Schmidt is $2mn^2 - \frac{2}{3}n^3$ flops.\\
+
+\pagebreak
+\section{Using modified Gram-Schmidt to get QR (better)}
+
+\noindent
+Verification of Algo:\\
+1, A = QR. by checking whether norm(A - Q*R) is a small number.\\
+2, Orthogonality: Q is orthogonal. by checking whether $Q^TQ = I$, norm(Q'* Q - eye(n)) should be small.
+
+\subsection{Modified Gram-Schmidt}
+
+Cost of QR by using classical Gram-Schmidt:\\
+
+
+\subsection*{Cost Analysis}
+
+
+
+% R 是正线上三角
+
+% \subsection{Process}
+% Suppose $A = [c_1, c_2, ... c_n]$ is a full-rank matrix, size $m \times n$.\\
+% \\
+% Basically 3 steps: \\
+% 1, find A's orthogonal set $F = [f_1, f_2 ... f_n]$.\\
+% 2, normalize each col of $F$ to get $Q = [q_1, q_2 ... q_n]$.\\
+% 3, find $R$ by $R = Q^TA$.\\
+% \\
+% To find $F$, use this formula where $f_1 = c_1$ (based on the orthogonal set): \\
+% $
+% f_k = c_k - \frac{c_k * f_1}{\left\lVert f_1\right\rVert^2} f_1
+% - \frac{c_k * f_2}{\left\lVert f_2\right\rVert^2} f_2
+% - ...
+% - \frac{c_k * f_{k-1}}{\left\lVert f_{k-1}\right\rVert^2} f_{k-1}
+% $ (k $>$ 2)
+% \\
+% \\
+% To find $Q$, normalize each col of $F$ by $q_j = \frac{f_j}{\left\lVert f_j\right\rVert }$, j = 1 to n.\\
+% At this time, $q_1, q_2 ... q_n$ are orthonormal cols.\\
+% \\
+% \\
+
+
+% 我们可以直接通过Q^TA = R 得出R
+
+\subsection*{Examples}
+See topic Notes.
+
+\subsection*{Cost}
+lalala
+
+\subsection*{Application}
+\includegraphics[width=1\linewidth]{7-4}\\
+
+\subsection*{Application1: Use QR to solve least-squares problems}
+11-09
+
+unitary matrix perserves the length of a vector.\\
+
+rank-1 update
+
+3 steps:\\
+1, transform problem % 利用了unitary的性质
+2, gradient 
+
+\end{document}
