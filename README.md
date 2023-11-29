@@ -10,6 +10,12 @@
 
 
 
+
+LecN9 Topics: Orthogonal subspaces & orthogonal projectors; Orthogonal decomposition; The 4 fundamental subspaces; the URV decomposition. Introduction to the Singular Value Decomposition. The singular value decomposition and its properties.
+
+
+
+
 #### Topics
 
 
@@ -22,7 +28,15 @@
 
 
 
+**mit-lec29~lec -如何求一个无解的方程组的解-最小二乘问题**
+
+
+
+
+
 #### 参考资料
 
 * 《数值计算方法》丁丽娟，程杞元
 * UMN CSCI 5304
+* Mit 线性代数公开课
+* 
